@@ -9,7 +9,7 @@ function smoothScrollTo(targetID) {
 
 $(function () {
     $("#down").click(function () {
-        smoothScrollTo("#projects");
+        smoothScrollTo("#about");
     });
 
     $("#back-to-top").click(function () {
