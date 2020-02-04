@@ -12,9 +12,41 @@ body {
     font-family: 'Monaco', 'Inconsolata', Courier, monospace;
 }
 
+@keyframes fadeInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 h1 {
     font-size: 30pt;
     color: #333;
+    animation: 1.5s ease-out 0s 1 fadeInFromTop;
 }
 
 header {
@@ -47,6 +79,14 @@ header a {
     position: relative;
     text-decoration: none;
     color: #000;
+}
+
+header > p {
+    animation: 1.5s ease-out 0s 1 fadeIn;
+}
+
+.header-links {
+    animation: 1.5s ease-out 0s 1 fadeInFromBottom;
 }
 
 header a:before {
