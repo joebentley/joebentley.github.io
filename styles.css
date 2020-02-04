@@ -1,0 +1,206 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14pt;
+
+    color: #ddd;
+    background-color: #222;
+}
+
+.mono {
+    font-family: 'Monaco', 'Inconsolata', Courier, monospace;
+}
+
+h1 {
+    font-size: 30pt;
+    color: #333;
+}
+
+header {
+    --text-color: #111;
+    color: var(--text-color);
+
+    height: 100vh;
+    background-image: url(images/atlas-hr.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+header > div {
+    /* align everything to center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    top: 20vh;
+    margin: 0 2rem;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+}
+
+header a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out;
+}
+
+header a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+header a {
+    color: #222;
+}
+
+header h1 {
+    margin: 2rem 0 1.5rem;
+}
+
+header p {
+    margin: 0 0 1rem;
+}
+
+#down {
+    position: absolute;
+    top: 80vh;
+    padding: 20px;
+    font-size: 3rem;
+    color: #ddd;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+#down:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+#back-to-top {
+    position: fixed;
+    left: 4vh;
+    top: 90vh;
+    font-size: 2rem;
+    color: #ddd;
+    transition: 0.5s;
+    opacity: 0.6;
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+#back-to-top > span {
+    position: relative;
+    left: 0.3rem;
+    top: 0.1rem;
+    font-size: 15pt;
+}
+
+#back-to-top > span:hover {
+    cursor: pointer;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+section {
+    /* height: 100vh; */
+    padding: 1rem 0 5rem 15%;
+    font-size: 13pt;
+}
+
+section h2 {
+    padding-left: 2rem;
+    font-size: 24pt;
+    font-weight: lighter;
+}
+
+section h3 {
+    padding-top: 1rem;
+    font-weight: lighter;
+}
+
+section a {
+    transition: 0.2s;
+    color: lightskyblue;
+}
+
+section a:hover {
+    transition: 0.2s;
+    color: #eee;
+}
+
+section ul {
+    margin-top: -0.5rem;
+}
+
+section {
+    max-width: 70ex;
+}
+
+#about {
+    max-width: unset;
+}
+
+#about>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#about>div>div:first-child {
+    max-width: 60ex;
+    flex-basis: 60ex;
+    padding-right: 5rem;
+}
+
+#about>div>div:last-child {
+    max-width: 70%;
+    min-width: 10vw;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 15vw;
+    text-align: right;
+    padding-right: 4rem;
+}
+
+#about img {
+    padding-top: 5%;
+    max-width: 100%;
+}
+
+#publications ol {
+    font-family: 'Times New Roman', Times, serif;
+}
