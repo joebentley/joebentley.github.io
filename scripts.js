@@ -1,10 +1,14 @@
 
-function smoothScrollTo(targetID) {
+function smoothScrollTo(targetID, after) {
+    if (after == null) {
+        after = function () {
+            location.hash = targetID;
+        }
+    }
+
     $("html, body").animate({
         scrollTop: $(targetID).offset().top
-    }, 600, 'swing', function () {
-        location.hash = targetID;
-    });
+    }, 600, 'swing', after);
 }
 
 $(function () {
@@ -13,7 +17,9 @@ $(function () {
     });
 
     $("#back-to-top").click(function () {
-        smoothScrollTo("#header");
+        smoothScrollTo("#header", function () {
+            location.hash = '';
+        });
     });
 });
 
