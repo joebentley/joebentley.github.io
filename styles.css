@@ -2,7 +2,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    font-size: 14pt;
+    font-size: 2.5vmin;
 
     color: #ddd;
     background-color: #222;
@@ -44,7 +44,7 @@ body {
 }
 
 h1 {
-    font-size: 30pt;
+    font-size: 7vmin;
     color: #333;
     animation: 1.5s ease-out 0s 1 fadeInFromTop;
 }
@@ -124,7 +124,7 @@ header p {
     position: absolute;
     top: 80vh;
     padding: 20px;
-    font-size: 3rem;
+    font-size: 5vmin;
     color: #ddd;
     transition: 0.5s;
     opacity: 0.8;
@@ -141,7 +141,7 @@ header p {
     position: fixed;
     left: 4vh;
     top: 90vh;
-    font-size: 2rem;
+    font-size: 4vmin;
     color: #ddd;
     transition: 0.5s;
     opacity: 0.6;
@@ -181,15 +181,24 @@ header p {
                                   supported by Chrome, Opera and Firefox */
 }
 
+.content {
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
 section {
-    padding: 1rem 15% 5rem 15%;
-    font-size: 13pt;
-    max-width: 70ex;
+    /* padding: 1rem 15vw 5rem 15vw; */
+    font-size: 2vmin;
+    width: 100%;
+}
+
+section > div {
+    margin: 0 auto;
 }
 
 section h2 {
     padding-left: 2rem;
-    font-size: 24pt;
+    font-size: 4vmin;
     font-weight: lighter;
 }
 
@@ -212,35 +221,42 @@ section ul {
     margin-top: -0.5rem;
 }
 
-#about {
-    max-width: unset;
-    padding-right: 5%;
+.text-column {
+    max-width: 60ex;
 }
 
-#about>div {
+.side-by-side {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
-#about>div>div:first-child {
-    max-width: 60ex;
-    flex-basis: 60ex;
-    padding-right: 5rem;
+.side-by-side>div:first-child {
+    padding-right: 5vw;
 }
 
-#about>div>div:last-child {
-    max-width: 70%;
-    min-width: 10vw;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 15vw;
-    text-align: right;
+.side-by-side>div:last-child {
+    /* flex-grow: 1; */
+    text-align: center;
 }
 
 #about img {
-    max-width: 300px;
+    max-height: 20em;
+}
+
+@media only screen and (max-width: 800px) {
+    .side-by-side {
+        display: block;
+    }
+
+    #about img {
+        margin-top: 3vh;
+        max-height: unset;
+        max-width: 60%;
+    }
 }
 
 #publications ol {
@@ -270,5 +286,5 @@ footer {
     float: right;
     margin-right: 1ex;
     margin-bottom: 1ex;
-    font-size: 10pt;
+    font-size: 2vmin;
 }

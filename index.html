@@ -32,10 +32,11 @@
             <span id="down" class="noselect">&darr;</span>
         </header>
 
+        <div class="content">
         <section id="about">
-            <h2>about me</h2>
-            <div>
-                <div>
+            <div class="side-by-side">
+                <div class="text-column">
+                    <h2>about me</h2>
                     <p>I am a keen and energised physicist currently completing my PhD at the
                     <a href="https://www.birmingham.ac.uk" target="_blank">University of
                     Birmingham</a>.</p>
@@ -65,35 +66,38 @@
         </section>
 
         <section id="projects">
-            <h2>projects</h2>
-            <h3>general realisation techniques for high-precision measurements</h3>
-            <p>Recently I have been working to bring techniques developed by the
-            quantum control community into the realm of high-precision
-            measurements. Specifically a way to realise arbitrary linear quantum
-            systems from their transfer functions.
-            A paper I have written utilising this is currently at the final
-            draft stage, <a href="#ref2">see publication 2 below</a>.</p>
+            <div class="text-column">
+                <h2>projects</h2>
+                <h3>general realisation techniques for high-precision measurements</h3>
+                <p>Recently I have been working to bring techniques developed by the
+                quantum control community into the realm of high-precision
+                measurements. Specifically a way to realise arbitrary linear quantum
+                systems from their transfer functions.
+                A paper I have written utilising this is currently at the final
+                draft stage, <a href="#ref2">see publication 2 below</a>.</p>
 
-            <p>In the future I plan to apply these techniques to the realisation
-            of second-order quantum filters for use in gravitational-wave detectors.</p>
+                <p>In the future I plan to apply these techniques to the realisation
+                of second-order quantum filters for use in gravitational-wave detectors.</p>
 
-            <p>I am also currently writing a python module to automatically
-            find the realisation from a given transfer function called <a
-            href="https://github.com/joebentley/simba" target="_blank">SImBA</a>.</p>
+                <p>I am also currently writing a python module to automatically
+                find the realisation from a given transfer function called <a
+                href="https://github.com/joebentley/simba" target="_blank">SImBA</a>.</p>
 
-            <h3>design of next-generation gravitational wave
-            interferometers</h3>
-            <p>One of my greatest interests is how the quantum noise of next-generation
-            gravitational wave detectors can be improved, for example using
-            novel quantum devices such as the <a
-            href="https://arxiv.org/abs/1506.00117" target="_blank">unstable
-            filter</a> in novel new configurations, such as the design I studied
-            in <a href="#ref1">publication 1 below</a>.</p>
+                <h3>design of next-generation gravitational wave
+                interferometers</h3>
+                <p>One of my greatest interests is how the quantum noise of next-generation
+                gravitational wave detectors can be improved, for example using
+                novel quantum devices such as the <a
+                href="https://arxiv.org/abs/1506.00117" target="_blank">unstable
+                filter</a> in novel new configurations, such as the design I studied
+                in <a href="#ref1">publication 1 below</a>.</p>
 
-            <h3>control issues in unstable quantum systems</h3>
-            <p>Additionally I am interested in studying the control of unstable quantum systems, such as
-            the unstable filter, and whether or not a stabilising controller can be
-            achieved in cases where approximations break down, such as long cavities.</p>
+                <h3>control issues in unstable quantum systems</h3>
+                <p>Additionally I am interested in studying the control of unstable quantum systems, such as
+                the unstable filter, and whether or not a stabilising controller can be
+                achieved in cases where approximations break down, such as long
+                cavities.</p>
+            </div>
         </section>
 
         <div class="wide">
@@ -102,62 +106,64 @@
         </div>
 
         <section id="coding">
-            <h2>coding</h2>
+            <div class="text-column">
+                <h2>coding</h2>
 
-            I have significant experience in Python, C++, Mathematica,
-            HTML/CSS/JavaScript (I designed this website by hand). I also have
-            good knowledge of Clojure, Java, C, Go, Rust, and Haskell.
+                I have significant experience in Python, C++, Mathematica,
+                HTML/CSS/JavaScript (I designed this website by hand). I also have
+                good knowledge of Clojure, Java, C, Go, Rust, and Haskell.
 
-            <h3>projects</h3>
+                <h3>projects</h3>
 
-            <p><em><a href="https://github.com/joebentley/simba"
-            target="_blank">SImBA</a></em>&mdash;a python module to
-            automatically construct the physical realisation of a quantum system
-            from a given set of transfer functions in terms of optical
-            components; <em>in progress.</em></p>
+                <p><em><a href="https://github.com/joebentley/simba"
+                target="_blank">SImBA</a></em>&mdash;a python module to
+                automatically construct the physical realisation of a quantum system
+                from a given set of transfer functions in terms of optical
+                components; <em>in progress.</em></p>
 
-            <p><em><a href="https://github.com/joebentley/lsystems"
-            target="_blank">lsystems</a></em>&mdash;an implementation of the
-            beautiful and elegant Lindenmayer systems in Clojure.</p>
+                <p><em><a href="https://github.com/joebentley/lsystems"
+                target="_blank">lsystems</a></em>&mdash;an implementation of the
+                beautiful and elegant Lindenmayer systems in Clojure.</p>
 
-            <p>I have also worked on numerous javascript education projects aimed at
-            A-level students including,</p>
-            <ul>
-                <li>an app showing the relation between a pair of sinusoids in
-                the time domain and on a phasor diagram [<a target="_blank"
-                href="http://www.joebentleyphysics.com/waveform-sine/">demo</a>
-                <a target="_blank"
-                href="https://github.com/joebentley/waveform-sine/">source</a>],</li>
-                <li>apps explaining Kirchhoff's current law [<a target="_blank"
-                href="http://www.joebentleyphysics.com/kirchoff-current-law/">demo</a>
-                <a target="_blank"
-                href="https://github.com/joebentley/kirchoff-current-law">source</a>]
-                and
-                voltage law [<a target="_blank" href="http://www.joebentleyphysics.com/kirchoff-voltage-law/">demo</a> <a
-                target="_blank"
-                href="https://github.com/joebentley/kirchhoff-voltage-law">source</a>],</li>
-                <li>and an app demonstrating periodic boundary conditions [<a
+                <p>I have also worked on numerous javascript education projects aimed at
+                A-level students including,</p>
+                <ul>
+                    <li>an app showing the relation between a pair of sinusoids in
+                    the time domain and on a phasor diagram [<a target="_blank"
+                    href="http://www.joebentleyphysics.com/waveform-sine/">demo</a>
+                    <a target="_blank"
+                    href="https://github.com/joebentley/waveform-sine/">source</a>],</li>
+                    <li>apps explaining Kirchhoff's current law [<a target="_blank"
+                    href="http://www.joebentleyphysics.com/kirchoff-current-law/">demo</a>
+                    <a target="_blank"
+                    href="https://github.com/joebentley/kirchoff-current-law">source</a>]
+                    and
+                    voltage law [<a target="_blank" href="http://www.joebentleyphysics.com/kirchoff-voltage-law/">demo</a> <a
                     target="_blank"
-                href="http://www.joebentleyphysics.com/wave-on-ring">demo</a> <a
-                target="_blank"
-                href="https://github.com/joebentley/wave-on-ring">source</a>]</li>
-            </ul>
+                    href="https://github.com/joebentley/kirchhoff-voltage-law">source</a>],</li>
+                    <li>and an app demonstrating periodic boundary conditions [<a
+                        target="_blank"
+                    href="http://www.joebentleyphysics.com/wave-on-ring">demo</a> <a
+                    target="_blank"
+                    href="https://github.com/joebentley/wave-on-ring">source</a>]</li>
+                </ul>
 
-            <p><em><a target="_blank"
-            href="https://github.com/joebentley/walk-gen">walk-gen</a></em>&mdash;a
-            random-walk and diffusion limited aggregation (DLA) generator in C++. The
-            above image is an example of a DLA generated by walk-gen :)</p>
+                <p><em><a target="_blank"
+                href="https://github.com/joebentley/walk-gen">walk-gen</a></em>&mdash;a
+                random-walk and diffusion limited aggregation (DLA) generator in C++. The
+                above image is an example of a DLA generated by walk-gen :)</p>
 
-            <p>Finally, <em><a target="_blank"
-            href="https://github.com/joebentley/survival">survival</a></em>,
-            pictured below. A unfinished survival roguelike inspired by games
-            such as dwarf fortress, caves of qud, and don't starve!</p>
-            
-            <h3>misc. scripts</h3>
+                <p>Finally, <em><a target="_blank"
+                href="https://github.com/joebentley/survival">survival</a></em>,
+                pictured below. A unfinished survival roguelike inspired by games
+                such as dwarf fortress, caves of qud, and don't starve!</p>
+                
+                <h3>misc. scripts</h3>
 
-            <p><em><a target="_blank"
-            href="https://gist.github.com/joebentley/6e3e4198ea427545738a8202130fcc25">process-bibliography.py</a></em>&mdash;automatically
-            process a bibtex file to be used for journals.</p>
+                <p><em><a target="_blank"
+                href="https://gist.github.com/joebentley/6e3e4198ea427545738a8202130fcc25">process-bibliography.py</a></em>&mdash;automatically
+                process a bibtex file to be used for journals.</p>
+            </div>
         </section>
 
         <div class="half-wide">
@@ -167,24 +173,27 @@
         </div>
 
         <section id="publications">
-            <h2>publications</h2>
-            <ol>
-                <li id="ref1">
-                    J. Bentley, P. Jones, D. Martynov, A. Freise, and H. Miao,
-                    Converting the signal-recycling cavity into an unstable
-                    optomechanical filter to enhance the detection bandwidth of
-                    gravitational-wave detectors, <a
-                    href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.102001"
-                    target="_blank">Phys. Rev. D 99, 102001</a> (2019).
-                </li>
-                <li id="ref2">
-                    J. Bentley, H. Nurdin, Y. Chen, and H. Miao, A systematic
-                    approach to realising quantum filters for high-precision
-                    measurementsusing network synthesis theory; <em>in
-                    progress</em> (2020).
-                </li>
-            </ol>
+            <div class="text-column">
+                <h2>publications</h2>
+                <ol>
+                    <li id="ref1">
+                        J. Bentley, P. Jones, D. Martynov, A. Freise, and H. Miao,
+                        Converting the signal-recycling cavity into an unstable
+                        optomechanical filter to enhance the detection bandwidth of
+                        gravitational-wave detectors, <a
+                        href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.102001"
+                        target="_blank">Phys. Rev. D 99, 102001</a> (2019).
+                    </li>
+                    <li id="ref2">
+                        J. Bentley, H. Nurdin, Y. Chen, and H. Miao, A systematic
+                        approach to realising quantum filters for high-precision
+                        measurementsusing network synthesis theory; <em>in
+                        progress</em> (2020).
+                    </li>
+                </ol>
+            </div>
         </section>
+        </div>
 
         <span id="back-to-top" class="noselect">&uarr;</span>
 
