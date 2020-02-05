@@ -181,9 +181,9 @@ header p {
 }
 
 section {
-    /* height: 100vh; */
-    padding: 1rem 0 5rem 15%;
+    padding: 1rem 15% 5rem 15%;
     font-size: 13pt;
+    max-width: 70ex;
 }
 
 section h2 {
@@ -211,12 +211,9 @@ section ul {
     margin-top: -0.5rem;
 }
 
-section {
-    max-width: 70ex;
-}
-
 #about {
     max-width: unset;
+    padding-right: 5%;
 }
 
 #about>div {
@@ -239,7 +236,6 @@ section {
     flex-shrink: 0;
     flex-basis: 15vw;
     text-align: right;
-    padding-right: 4rem;
 }
 
 #about img {
