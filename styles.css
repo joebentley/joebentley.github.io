@@ -245,3 +245,29 @@ section ul {
 #publications ol {
     font-family: 'Times New Roman', Times, serif;
 }
+
+.wide {
+    width: 100%;
+}
+
+.wide img {
+    width: 100%;
+    height: auto;
+}
+
+.half-wide {
+    margin-left: 25%;
+    width: 50%;
+}
+
+.half-wide img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    float: right;
+    margin-right: 1ex;
+    margin-bottom: 1ex;
+    font-size: 10pt;
+}
