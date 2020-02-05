@@ -239,8 +239,7 @@ section ul {
 }
 
 #about img {
-    padding-top: 5%;
-    max-width: 100%;
+    max-width: 300px;
 }
 
 #publications ol {
