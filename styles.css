@@ -2,7 +2,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    font-size: 1.7vw;
+    font-size: 12pt;
 
     color: #ddd;
     background-color: #222;
@@ -44,9 +44,19 @@ body {
 }
 
 h1 {
-    font-size: 7vmin;
+    font-size: 25pt;
     color: #333;
     animation: 1.5s ease-out 0s 1 fadeInFromTop;
+}
+
+@media only screen and (min-width: 1500px) {
+    h1 {
+        font-size: 35pt;
+    }
+
+    body {
+        font-size: 20pt;
+    }
 }
 
 header {
