@@ -22,9 +22,9 @@
                 Software development;</p>
                 <p class="mono header-links">
                     <a href="#about">about</a> --
-                    <a href="#projects">projects</a> --
-                    <a href="#publications">publications</a> --
+                    <a href="#recent-works">recent</a> --
                     <a href="#coding">coding</a> --
+                    <a href="#publications">publications</a> --
                     <a href="mailto:jbentley@star.sr.bham.ac.uk">email</a>
                 </p>
             </div>
@@ -64,39 +64,45 @@
                 <div><img alt="My wife and I in Morocco" src="images/me-and-marie.jpg"></div>
             </div>
         </section>
+        </div>
 
-        <section id="projects">
-            <div class="text-column">
-                <h2>projects</h2>
-                <h3>general realisation techniques for high-precision measurements</h3>
-                <p>Recently I have been working to bring techniques developed by the
-                quantum control community into the realm of high-precision
-                measurements. Specifically a way to realise arbitrary linear quantum
-                systems from their transfer functions.
-                A paper I have written utilising this is currently at the final
-                draft stage, <a href="#ref2">see publication 2 below</a>.</p>
-
-                <p>In the future I plan to apply these techniques to the realisation
-                of second-order quantum filters for use in gravitational-wave detectors.</p>
-
-                <p>I am also currently writing a python module to automatically
-                find the realisation from a given transfer function called <a
-                href="https://github.com/joebentley/simba" target="_blank">SImBA</a>.</p>
-
-                <h3>design of next-generation gravitational wave
-                interferometers</h3>
-                <p>One of my greatest interests is how the quantum noise of next-generation
-                gravitational wave detectors can be improved, for example using
-                novel quantum devices such as the <a
-                href="https://arxiv.org/abs/1506.00117" target="_blank">unstable
-                filter</a> in novel new configurations, such as the design I studied
-                in <a href="#ref1">publication 1 below</a>.</p>
-
-                <h3>control issues in unstable quantum systems</h3>
-                <p>Additionally I am interested in studying the control of unstable quantum systems, such as
-                the unstable filter, and whether or not a stabilising controller can be
-                achieved in cases where approximations break down, such as long
-                cavities.</p>
+        <section id="recent-works" class="white-section">
+            <h2>recent work</h2>
+            <div class="three-columns">
+                <div><a href="https://github.com/joebentley/simba"
+                        target="_blank"><img src="images/simba.png"></a>
+                    <div>
+                        <h3>Software for systematic realisation of transfer functions</h3>
+                        <p><a href="https://github.com/joebentley/simba"
+                        target="_blank">SImBA</a>&mdash;a Python module currently in-progress to
+                        automatically find the optical realisation from a set of
+                        transfer functions.</p>
+                    </div>
+                </div>
+                <div><a href="#ref2"><img src="images/realisation.png"></a>
+                    <div>
+                        <h3>General realisation techniques for high-precision
+                        measurements</h3>
+                        <p>Recently I have been working to bring techniques developed by the
+                        quantum control community into the realm of high-precision
+                        measurements. Specifically a way to realise arbitrary linear quantum
+                        systems from their transfer functions.
+                        A paper I have written utilising this is currently at the final
+                        draft stage, <a href="#ref2">see publication 2 below</a>.</p>
+                    </div></div>
+                <div><a href="#ref1"><img
+                src="images/unstable-filter-signal-recycling.png"></a>
+                    <div>
+                        <h3>New designs for next-generation gravitational wave
+                        detectors</h3>
+                        <p>One of my greatest interests is how the quantum noise of next-generation
+                        gravitational wave detectors can be improved, for example using
+                        novel quantum devices such as the <a
+                        href="https://arxiv.org/abs/1506.00117" target="_blank">unstable
+                        filter</a> in novel new configurations, such as the design I studied
+                        in <a href="#ref1">publication 1 below</a>.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -187,7 +193,7 @@
                     <li id="ref2">
                         J. Bentley, H. Nurdin, Y. Chen, and H. Miao, A systematic
                         approach to realising quantum filters for high-precision
-                        measurementsusing network synthesis theory; <em>in
+                        measurements using network synthesis theory; <em>in
                         progress</em> (2020).
                     </li>
                 </ol>

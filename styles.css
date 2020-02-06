@@ -2,7 +2,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    font-size: 2.5vmin;
+    font-size: 1.7vw;
 
     color: #ddd;
     background-color: #222;
@@ -142,15 +142,9 @@ header p {
     left: 4vh;
     top: 90vh;
     font-size: 4vmin;
-    color: #ddd;
+    color: #aaa;
     transition: 0.5s;
-    opacity: 0.6;
-}
-
-@media only screen and (max-width: 700px) {
-    #back-to-top {
-        display: none;
-    }
+    opacity: 0.8;
 }
 
 #back-to-top:hover {
@@ -188,7 +182,7 @@ header p {
 
 section {
     /* padding: 1rem 15vw 5rem 15vw; */
-    font-size: 2vmin;
+    font-size: 12pt;
     width: 100%;
 }
 
@@ -198,7 +192,7 @@ section > div {
 
 section h2 {
     padding-left: 2rem;
-    font-size: 4vmin;
+    font-size: 20pt;
     font-weight: lighter;
 }
 
@@ -247,7 +241,54 @@ section ul {
     max-height: 20em;
 }
 
-@media only screen and (max-width: 800px) {
+.white-section {
+    background-color: #ddd;
+    color: #333;
+}
+
+.white-section a {
+    transition: 0.2s;
+    color: darkcyan;
+}
+
+.white-section a:hover {
+    transition: 0.2s;
+    color: lightskyblue;
+}
+
+#recent-works {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#recent-works h2 {
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.three-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 2rem;
+    max-width: 180ex;
+}
+
+.three-columns > div {
+    flex-basis: 30%;
+}
+
+.three-columns > div img {
+    width: 100%;
+}
+
+.three-columns > div > div {
+    padding: 0 1rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 900px) {
     .side-by-side {
         display: block;
     }
@@ -256,6 +297,18 @@ section ul {
         margin-top: 3vh;
         max-height: unset;
         max-width: 60%;
+    }
+
+    .three-columns {
+        display: block;
+    }
+
+    .three-columns img {
+        max-width: 75%;
+    }
+
+    #back-to-top {
+        display: none;
     }
 }
 
