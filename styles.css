@@ -26,6 +26,22 @@
     opacity: 1;
   }
 }
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome, Opera and Firefox */
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
@@ -35,6 +51,11 @@ body {
   background-color: #222;
 }
 
+@media only screen and (min-width: 1500px) {
+  body {
+    font-size: 20pt;
+  }
+}
 a {
   transition: 0.2s;
 }
@@ -46,25 +67,12 @@ a:hover {
   font-family: "Monaco", "Inconsolata", Courier, monospace;
 }
 
-h1 {
-  font-size: 25pt;
-  color: #333;
-  animation: 1.5s ease-out 0s 1 fadeInFromTop;
-  margin: 2rem 0 1.5rem;
+.serif {
+  font-family: "Times New Roman", Times, serif;
 }
 
-@media only screen and (min-width: 1500px) {
-  h1 {
-    font-size: 35pt;
-  }
-
-  body {
-    font-size: 20pt;
-  }
-}
 header {
-  --text-color: #111;
-  color: var(--text-color);
+  color: #111;
   height: 100vh;
   background-image: url(images/atlas-hr.jpg);
   background-color: white;
@@ -94,7 +102,7 @@ header section .header-links {
 header a {
   position: relative;
   text-decoration: none;
-  color: #222;
+  color: #111;
 }
 header a:before {
   content: "";
@@ -103,7 +111,7 @@ header a:before {
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: var(--text-color);
+  background-color: #111;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.2s ease-in-out;
@@ -113,55 +121,18 @@ header a:hover:before {
   transform: scaleX(1);
 }
 
-#down {
-  position: absolute;
-  top: 80vh;
-  padding: 20px;
-  font-size: 5vmin;
-  color: #ddd;
-  transition: 0.5s;
-  opacity: 0.8;
-}
-#down:hover {
-  cursor: pointer;
-  color: #fff;
-  transition: 0.5s;
-  opacity: 1;
+h1 {
+  font-size: 25pt;
+  color: #333;
+  animation: 1.5s ease-out 0s 1 fadeInFromTop;
+  margin: 2rem 0 1.5rem;
 }
 
-#back-to-top {
-  position: fixed;
-  left: 4vh;
-  top: 90vh;
-  font-size: 4vmin;
-  color: #aaa;
-  color: #aaa;
-  transition: 0.5s;
-  opacity: 0.8;
+@media only screen and (min-width: 1500px) {
+  h1 {
+    font-size: 35pt;
+  }
 }
-#back-to-top:hover {
-  cursor: pointer;
-  color: #fff;
-  transition: 0.5s;
-  opacity: 1;
-}
-
-.noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-     supported by Chrome, Opera and Firefox */
-}
-
 .content {
   margin-left: 8vw;
   margin-right: 8vw;
@@ -209,11 +180,20 @@ section ul {
 .side-by-side > *:last-child {
   text-align: center;
 }
-
-#about img {
+.side-by-side img {
   max-height: 20em;
 }
 
+@media only screen and (max-width: 900px) {
+  .side-by-side {
+    display: block;
+  }
+  .side-by-side img {
+    margin-top: 3vh;
+    max-height: unset;
+    max-width: 60%;
+  }
+}
 .white-section {
   background-color: #f4f4f4;
   color: #333;
@@ -255,31 +235,13 @@ section ul {
 }
 
 @media only screen and (max-width: 900px) {
-  .side-by-side {
-    display: block;
-  }
-
-  #about img {
-    margin-top: 3vh;
-    max-height: unset;
-    max-width: 60%;
-  }
-
   .three-columns {
     display: block;
   }
   .three-columns img {
     max-width: 75%;
   }
-
-  #back-to-top {
-    display: none;
-  }
 }
-#publications ol {
-  font-family: "Times New Roman", Times, serif;
-}
-
 .wide {
   width: 100%;
 }
@@ -297,6 +259,44 @@ section ul {
   height: auto;
 }
 
+#down {
+  position: absolute;
+  top: 80vh;
+  padding: 20px;
+  font-size: 5vmin;
+  color: #ddd;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+#down:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+#back-to-top {
+  position: fixed;
+  left: 4vh;
+  top: 90vh;
+  font-size: 4vmin;
+  color: #aaa;
+  color: #aaa;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+#back-to-top:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  #back-to-top {
+    display: none;
+  }
+}
 footer {
   float: right;
   margin-right: 1ex;
