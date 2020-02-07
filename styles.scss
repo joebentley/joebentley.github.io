@@ -1,4 +1,4 @@
-@import 'sass/anim';
+@use 'sass/anim';
 
 $font-stack: Helvetica, Arial, sans-serif;
 $mono-stack: 'Monaco', 'Inconsolata', Courier, monospace;
@@ -17,9 +17,9 @@ body {
 
 a {
     transition: 0.2s;
-}
-a:hover {
-    transition: 0.2s;
+    &:hover {
+        transition: 0.2s;
+    }
 }
 
 .mono {
