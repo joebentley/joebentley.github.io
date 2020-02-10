@@ -133,6 +133,16 @@ h1 {
     font-size: 35pt;
   }
 }
+.permalink {
+  padding-left: 0.5ex;
+  font-size: 17pt;
+  transition: 0.5s;
+  color: #aaa;
+}
+.permalink:hover {
+  color: #ddd;
+}
+
 .content {
   margin-left: 8vw;
   margin-right: 8vw;
@@ -203,6 +213,12 @@ section ul {
 }
 .white-section a:hover {
   color: lightskyblue;
+}
+.white-section .permalink {
+  color: #666;
+}
+.white-section .permalink:hover {
+  color: #333;
 }
 
 #recent-works {

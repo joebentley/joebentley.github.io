@@ -124,6 +124,16 @@ h1 {
 
 // MAIN CONTENT
 
+.permalink {
+    padding-left: 0.5ex;
+    font-size: 17pt;
+    transition: 0.5s;
+    color: #aaa;
+    &:hover {
+        color: $body-text-color;
+    }
+}
+
 $dark-link-color: lightskyblue;
 $dark-link-hover-color: #eee;
 
@@ -211,6 +221,8 @@ $white-section-link-hover-color: lightskyblue;
     color: $white-section-color;
     a { color: $white-section-link-color; }
     a:hover { color: $white-section-link-hover-color; }
+    .permalink { color: #666; }
+    .permalink:hover { color: $white-section-color; }
 }
 
 #recent-works {
