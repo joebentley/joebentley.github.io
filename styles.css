@@ -71,6 +71,60 @@ a:hover {
   font-family: "Times New Roman", Times, serif;
 }
 
+.nav-bar {
+  position: absolute;
+  width: 100%;
+  top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar > span {
+  padding: 0 2rem;
+}
+.nav-bar a {
+  position: relative;
+  text-decoration: none;
+  color: #eee;
+}
+.nav-bar a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+.nav-bar a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-bar.invert a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+.nav-bar.invert a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+.nav-bar.invert a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 header {
   color: #111;
   height: 100vh;
@@ -108,7 +162,7 @@ header a:before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1.5px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background-color: #111;
@@ -126,6 +180,14 @@ h1 {
   color: #333;
   animation: 1.5s ease-out 0s 1 fadeInFromTop;
   margin: 2rem 0 1.5rem;
+}
+
+.short-header {
+  height: 55vh;
+  background-image: url(images/atlas-hr-short.jpg);
+}
+.short-header h1 {
+  animation: none;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -146,6 +208,8 @@ h1 {
 .content {
   margin-left: 8vw;
   margin-right: 8vw;
+  font-size: 12pt;
+  padding: 0.5rem 0;
 }
 .content a {
   color: lightskyblue;
@@ -153,20 +217,16 @@ h1 {
 .content a:hover {
   color: #eee;
 }
-
-section {
-  font-size: 12pt;
-}
-section h2 {
+.content h2 {
   padding-left: 2rem;
   font-size: 20pt;
   font-weight: lighter;
 }
-section h3 {
+.content h3 {
   padding-top: 1rem;
   font-weight: lighter;
 }
-section ul {
+.content ul {
   margin-top: -0.5rem;
 }
 
@@ -191,6 +251,7 @@ section ul {
   text-align: center;
 }
 .side-by-side img {
+  padding-top: 1rem;
   max-height: 20em;
 }
 
@@ -258,7 +319,29 @@ section ul {
     max-width: 75%;
   }
 }
+#walk-gen {
+  position: relative;
+  left: -20%;
+  width: 120%;
+}
+#walk-gen img {
+  width: 120%;
+  height: auto;
+}
+
+#survival {
+  position: relative;
+  left: 0%;
+  width: 100%;
+}
+#survival img {
+  width: 100%;
+  height: auto;
+}
+
 .wide {
+  position: relative;
+  left: 0%;
   width: 100%;
 }
 .wide img {
@@ -318,6 +401,10 @@ footer {
   margin-right: 1ex;
   margin-bottom: 1ex;
   font-size: 2vmin;
+}
+
+.contact {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

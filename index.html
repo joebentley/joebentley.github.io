@@ -16,18 +16,26 @@
     </head>
 
     <body>
+        <nav class="nav-bar">
+            <span><a href="index.html">Home</a></span>
+            <span>
+                <a href="coding.html">coding</a> &nbsp;
+                <a href="#contact">contact</a>
+            </span>
+        </nav>
+
         <header id="header">
             <section>
                 <h1>Joe Bentley</h1>
                 <p>High-precision measurements; Macroscopic quantum mechanics;
                 Software development;</p>
-                <p class="mono header-links">
+                <!-- <nav class="mono header-links">
                     <a href="#about">about</a> --
                     <a href="#recent-works">recent</a> --
                     <a href="#coding">coding</a> --
                     <a href="#publications">publications</a> --
                     <a href="mailto:jbentley@star.sr.bham.ac.uk">email</a>
-                </p>
+                </nav> -->
             </section>
 
             <span id="down" class="noselect">&darr;</span>
@@ -36,9 +44,9 @@
         <section id="about" class="content side-by-side">
             <section class="text-column">
                 <h2>about me<a href="#about"><i class="las la-paperclip permalink"></i></a></h2>
-                <p>I am a keen and energised physicist currently completing my PhD at the
-                <a href="https://www.birmingham.ac.uk" target="_blank">University of
-                Birmingham</a>.</p>
+                <p>I am a keen and energised physicist currently completing my
+                PhD at the University of
+                Birmingham in the UK.</p>
                 
                 <p>My research interests include:</p>
                 <ul>
@@ -52,13 +60,11 @@
                 have an extensive
                 <a href="https://github.com/joebentley" target="_blank">github</a>
                 portfolio, <a href="#coding">outlined below</a>.</p>
-                
-                <p>I am also a member of the LIGO Scientific Collaboration.</p>
 
-                <p>In my free time, I enjoy reading books, <a
+                <!-- <p>In my free time, I enjoy reading books, <a
                 target="_blank" href="https://bowsamic.bandcamp.com">producing music</a>, playing board
-                games, and walking&mdash;the above cover photo was taken in the beautiful
-                Atlas Mountains south of Marrakesh :)</p>
+                games, and walking with my wife&mdash;the above cover photo was taken in the beautiful
+                Atlas Mountains south of Marrakesh :)</p> -->
             </section>
             <div><img alt="My wife and I in Morocco" src="images/me-and-marie.jpg"></div>
         </section>
@@ -70,35 +76,36 @@
                         target="_blank"><img src="images/simba.png"></a>
                     <section>
                         <h3>Software for systematic realisation of transfer functions</h3>
-                        <p><a href="https://github.com/joebentley/simba"
-                        target="_blank">SImBA</a>&mdash;a Python module currently in-progress to
-                        automatically find the optical realisation from a set of
-                        transfer functions.</p>
+                        <p>Currently I am writing <a href="https://github.com/joebentley/simba"
+                        target="_blank">SImBA</a>&mdash;a Python module to
+                        automatically construct the schematic of an
+                        optical realisation directly from a set of
+                        frequency-domain transfer functions.</p>
                     </section>
                 </article>
                 <article><a href="#ref2"><img src="images/realisation.png"></a>
                     <section>
                         <h3>General realisation techniques for high-precision
                         measurements</h3>
-                        <p>Recently I have been working to bring techniques developed by the
+                        <p>I have recently been working to bring techniques developed by the
                         quantum control community into the realm of high-precision
-                        measurements. Specifically a way to realise arbitrary linear quantum
+                        measurements. Specifically, methods to realise arbitrary linear quantum
                         systems from their transfer functions.
                         A paper I have written utilising this is currently at the final
-                        draft stage, <a href="#ref2">see publication 2 below</a>.</p>
+                        draft stage.</p>
                     </section>
                 </article>
-                <article><a href="#ref1"><img
+                <article><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.102001"><img
                 src="images/unstable-filter-signal-recycling.png"></a>
                     <section>
                         <h3>New designs for next-generation gravitational wave
                         detectors</h3>
-                        <p>One of my greatest interests is how the quantum noise of next-generation
+                        <p>One of my interests is how the quantum noise of next-generation
                         gravitational wave detectors can be improved, for example using
                         novel quantum devices such as the <a
                         href="https://arxiv.org/abs/1506.00117" target="_blank">unstable
                         filter</a> in novel new configurations, such as the design I studied
-                        in <a href="#ref1">publication 1 below</a>.</p>
+                        <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.102001">here</a>.</p>
                     </section>
                 </article>
             </section>
@@ -109,89 +116,24 @@
             limited aggregation" src="images/comparison.png"></a>
         </section>
 
-        <section id="coding" class="text-column content">
-            <h2>coding<a href="#coding"><i class="las la-paperclip permalink"></i></a></h2>
-
-            I have significant experience in Python, C++, Mathematica,
-            HTML/CSS/JavaScript (I designed this website by hand). I also have
-            good knowledge of Clojure, Java, C, Go, Rust, and Haskell.
-
-            <h3>projects</h3>
-
-            <p><em><a href="https://github.com/joebentley/simba"
-            target="_blank">SImBA</a></em>&mdash;a python module to
-            automatically construct the physical realisation of a quantum system
-            from a given set of transfer functions in terms of optical
-            components; <em>in progress.</em></p>
-
-            <p><em><a href="https://github.com/joebentley/lsystems"
-            target="_blank">lsystems</a></em>&mdash;an implementation of the
-            beautiful and elegant Lindenmayer systems in Clojure.</p>
-
-            <p>I have also worked on numerous javascript education projects aimed at
-            A-level students including,</p>
-            <ul>
-                <li>an app showing the relation between a pair of sinusoids in
-                the time domain and on a phasor diagram [<a target="_blank"
-                href="http://www.joebentleyphysics.com/waveform-sine/">demo</a>
-                <a target="_blank"
-                href="https://github.com/joebentley/waveform-sine/">source</a>],</li>
-                <li>apps explaining Kirchhoff's current law [<a target="_blank"
-                href="http://www.joebentleyphysics.com/kirchoff-current-law/">demo</a>
-                <a target="_blank"
-                href="https://github.com/joebentley/kirchoff-current-law">source</a>]
-                and
-                voltage law [<a target="_blank" href="http://www.joebentleyphysics.com/kirchoff-voltage-law/">demo</a> <a
-                target="_blank"
-                href="https://github.com/joebentley/kirchhoff-voltage-law">source</a>],</li>
-                <li>and an app demonstrating periodic boundary conditions [<a
-                    target="_blank"
-                href="http://www.joebentleyphysics.com/wave-on-ring">demo</a> <a
-                target="_blank"
-                href="https://github.com/joebentley/wave-on-ring">source</a>]</li>
-            </ul>
-
-            <p><em><a target="_blank"
-            href="https://github.com/joebentley/walk-gen">walk-gen</a></em>&mdash;a
-            random-walk and diffusion limited aggregation (DLA) generator in C++. The
-            above image is an example of a DLA generated by walk-gen :)</p>
-
-            <p>Finally, <em><a target="_blank"
-            href="https://github.com/joebentley/survival">survival</a></em>,
-            pictured below. A unfinished survival roguelike inspired by games
-            such as dwarf fortress, caves of qud, and don't starve!</p>
-            
-            <h3>misc. scripts</h3>
-
-            <p><em><a target="_blank"
-            href="https://gist.github.com/joebentley/6e3e4198ea427545738a8202130fcc25">process-bibliography.py</a></em>&mdash;automatically
-            process a bibtex file to be used for journals.</p>
-        </section>
-
-        <section class="half-wide">
-            <a target="_blank"
-            href="https://github.com/joebentley/survival"><img alt="Screenshot
-            of survival roguelike" src="images/survival.png"></a>
-        </section>
-
-        <section id="publications" class="text-column content serif">
-            <h2>publications<a href="#publications"><i class="las la-paperclip permalink"></i></a></h2>
-            <ol>
-                <li id="ref1">
-                    J. Bentley, P. Jones, D. Martynov, A. Freise, and H. Miao,
-                    Converting the signal-recycling cavity into an unstable
-                    optomechanical filter to enhance the detection bandwidth of
-                    gravitational-wave detectors, <a
-                    href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.102001"
-                    target="_blank">Phys. Rev. D 99, 102001</a> (2019).
-                </li>
-                <li id="ref2">
-                    J. Bentley, H. Nurdin, Y. Chen, and H. Miao, A systematic
-                    approach to realising quantum filters for high-precision
-                    measurements using network synthesis theory; <em>in
-                    progress</em> (2020).
-                </li>
-            </ol>
+        <section id="contact" class="content text-column">
+            <h2>contact details</h2>
+            <section class="mono">
+                <ul class="contact">
+                    <li>
+                        phone: (+44)7500 129 645
+                    </li>
+                    <li>
+                        email: <a href="mailto:jbentley@star.sr.bham.ac.uk">jbentley@star.sr.bham.ac.uk</a>
+                    </li>
+                    <li>
+                        address:<br>
+                        &nbsp;Physics West office G26<br>
+                        &nbsp;Birmingham B15 2TT<br>
+                        &nbsp;Edgbaston, United Kingdom
+                    </li>
+                </ul>
+            </section>
         </section>
         </div>
 

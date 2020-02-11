@@ -10,6 +10,8 @@ $body-text-color: #ddd;
 $body-background-color: #222;
 $breakpoint-big: 1500px;
 $breakpoint-small: 900px;
+$h1-color: #333;
+$header-text-color: #111;
 
 body {
     font-family: $font-stack;
@@ -42,11 +44,29 @@ a {
     font-family: $serif-stack;
 }
 
+// NAV LINKS
+
+.nav-bar {
+    position: absolute;
+    width: 100%;
+    top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    >span { padding: 0 2rem; }
+
+    a {
+        @include anim.animated-underline(#eee);
+    }
+}
+
+.nav-bar.invert {
+    a{
+        @include anim.animated-underline(#333);
+    }
+}
 
 // HEADER
-
-$h1-color: #333;
-$header-text-color: #111;
 
 header {
     color: $header-text-color;
@@ -83,28 +103,7 @@ header {
     }
 
     a {
-        position: relative;
-        text-decoration: none;
-        color: $header-text-color;
-
-        // Animated underline of links in header
-        &:before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 1.5px;
-            bottom: 0;
-            left: 0;
-            background-color: $header-text-color;
-            visibility: hidden;
-            transform: scaleX(0);
-            transition: all 0.2s ease-in-out;
-        }
-
-        &:hover:before {
-            visibility: visible;
-            transform: scaleX(1);
-        }
+        @include anim.animated-underline($header-text-color);
     }
 }
 
@@ -113,6 +112,12 @@ h1 {
     color: $h1-color;
     animation: 1.5s ease-out 0s 1 fadeInFromTop;
     margin: 2rem 0 1.5rem;
+}
+
+.short-header {
+    height: 55vh;
+    background-image: url(images/atlas-hr-short.jpg);
+    h1 { animation: none; }
 }
 
 @media only screen and (min-width: $breakpoint-big) {
@@ -148,10 +153,9 @@ $dark-link-hover-color: #eee;
     a:hover {
         color: $dark-link-hover-color;
     }
-}
 
-section {
     font-size: 12pt;
+    padding: 0.5rem 0;
 
     h2 {
         padding-left: 2rem;
@@ -193,6 +197,7 @@ section {
     }
 
     img {
+        padding-top: 1rem;
         max-height: 20em;
     }
 }
@@ -269,12 +274,26 @@ $white-section-link-hover-color: lightskyblue;
 
 // FULL-WIDTH IMAGES
 
-.wide {
-    width: 100%;
+@mixin wider($left, $width) {
+    position: relative;
+    left: -$left;
+    width: $width;
     img {
-        width: 100%;
+        width: $width;
         height: auto;
     }
+}
+
+#walk-gen {
+    @include wider(20%, 120%);
+}
+
+#survival {
+    @include wider(0%, 100%);
+}
+
+.wide {
+    @include wider(0%, 100%);
 }
 
 .half-wide {
@@ -338,4 +357,10 @@ footer {
     margin-right: 1ex;
     margin-bottom: 1ex;
     font-size: 2vmin;
+}
+
+// MISC
+
+.contact {
+    list-style-type: none;
 }
