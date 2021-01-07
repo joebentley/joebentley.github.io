@@ -283,13 +283,30 @@ h1 {
 }
 
 #recent-works {
-  margin: 2rem auto;
+  margin: 2rem 0 0 0;
   padding: 1rem 0;
   text-align: center;
 }
 #recent-works h2 {
   padding: 0;
   margin-bottom: 0.5rem;
+}
+
+#publications {
+  margin: 0;
+  padding: 3rem 8rem;
+}
+#publications h2 {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+#publications li {
+  padding-bottom: 0.4rem;
+}
+#publications li span {
+  display: inline-block;
+  max-width: 70ch;
+  vertical-align: top;
 }
 
 .three-columns {
