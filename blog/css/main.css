@@ -5,11 +5,16 @@ body {
 
     max-width: 32em;
     margin: 2em auto 4em auto;
+    padding: 0 1em;
 }
 
 p {
     text-align: justify;
     text-justify: auto;
+}
+
+h2 {
+    font-weight: normal;
 }
 
 code {
